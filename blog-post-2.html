@@ -1,60 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CI With Azure Pipelines | Blog</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header class="header">
-        <nav class="nav container">
-            <a href="index.html" class="nav__logo">Srikanth Thokala</a>
-            <div class="nav__menu">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="blog.html" class="nav__link active-link">Blog</a></li>
-                    <li class="nav__item"><a href="index.html#contact" class="nav__link">Contact</a></li>
-                </ul>
-                <i class="fa-solid fa-circle-half-stroke nav__theme-button" id="theme-button"></i>
-            </div>
-        </nav>
-    </header>
-
-    <main class="main">
-        <section class="blog-post-page section">
-            <div class="blog-post__container container card">
-                <h1 class="blog-post__title">Continuous Integration With Azure Pipelines: A Complete Guide</h1>
-                <p class="blog-post__meta">By Srikanth Thokala | Published on: September 18, 2025</p>
-                
-                <div class="blog-post__content">
-                    <p>Software development is moving faster than ever, and keeping up without losing quality is a real challenge. As projects grow, managing changes and ensuring everything works as expected becomes harder. That’s where Continuous Integration (CI) with Azure Pipelines helps. It automatically builds and tests your code every time there’s a change, so you can catch issues early and keep your development process running smoothly.</p>
-
-                    <h3>What is Azure Pipelines?</h3>
-                    <p>Azure Pipelines is a cloud-based service from Microsoft that automates your software delivery process. It builds, tests, and deploys your code every time you make a change, helping you catch problems early and speed up development. Key benefits include support for Linux, macOS, and Windows, CI/CD as code using YAML, and easy integration with GitHub and Azure Repos.</p>
-
-                    <h3>How CI/CD Works in Azure Pipelines</h3>
-                    <p>The CI/CD process begins when a developer commits code, which triggers a build pipeline. This pipeline compiles the code, runs unit tests, and creates build artifacts. Once successful, these artifacts are stored and a release pipeline is triggered, which deploys the application across different environments like Development, Staging, and Production.</p>
-
-                    <h3>Core Components of Azure Pipelines</h3>
-                    <p>To make CI/CD work smoothly, it’s important to understand the fundamental building blocks:</p>
-                    <ul>
-                        <li><strong>Stages, Jobs & Steps:</strong> A hierarchy for organizing your workflow into logical groups like Build, Test, or Deploy.</li>
-                        <li><strong>Agent Pools:</strong> The compute infrastructure (VMs) where jobs run, either Microsoft-hosted or self-hosted for custom needs.</li>
-                        <li><strong>Triggers:</strong> Rules that define when a pipeline should run, such as on a code commit (Push Trigger) or pull request.</li>
-                        <li><strong>Variables:</strong> Reusable placeholders for values like environment names or version numbers.</li>
-                        <li><strong>Artifacts:</strong> The output of your build process, like binaries or Docker images, passed to the release pipeline.</li>
-                        <li><strong>Service Connections:</strong> Secure links to external services like Azure subscriptions, GitHub, or Docker Hub.</li>
-                        <li><strong>Environments:</strong> Representations of your deployment targets (e.g., Dev, QA, Prod) that help track deployments and enforce policies.</li>
-                    </ul>
-
-                    <h3>Getting Started: CI Setup with YAML</h3>
-                    <p>Setting up CI with YAML provides a version-controlled, code-based approach to defining your pipelines.</p>
-                    <h4>Step 1: Define Triggers, Agents, and Variables</h4>
-                    <p>Your YAML file starts by defining when the pipeline runs, what kind of machine it runs on, and any reusable variables.</p>
-<pre class="code-block"><code># Trigger on changes to main or develop branches
+<!doctypehtml><html lang=en><meta charset=UTF-8><meta content="width=device-width,initial-scale=1"name=viewport><title>CI With Azure Pipelines | Blog</title><link href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css rel=stylesheet><link href=assets/css/style.css rel=stylesheet><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"rel=stylesheet><header class=header><nav class="container nav"><a class=nav__logo href=index.html>Srikanth Thokala</a><div class=nav__menu><ul class=nav__list><li class=nav__item><a class=nav__link href=index.html>Home</a><li class=nav__item><a class="nav__link active-link"href=blog.html>Blog</a><li class=nav__item><a class=nav__link href=index.html#contact>Contact</a></ul><i class="fa-circle-half-stroke fa-solid nav__theme-button"id=theme-button></i></div></nav></header><main class=main><section class="blog-post-page section"><div class="container blog-post__container card"><h1 class=blog-post__title>Continuous Integration With Azure Pipelines: A Complete Guide</h1><p class=blog-post__meta>By Srikanth Thokala | Published on: September 18, 2025<div class=blog-post__content><p>Software development is moving faster than ever, and keeping up without losing quality is a real challenge. As projects grow, managing changes and ensuring everything works as expected becomes harder. That’s where Continuous Integration (CI) with Azure Pipelines helps. It automatically builds and tests your code every time there’s a change, so you can catch issues early and keep your development process running smoothly.<h3>What is Azure Pipelines?</h3><p>Azure Pipelines is a cloud-based service from Microsoft that automates your software delivery process. It builds, tests, and deploys your code every time you make a change, helping you catch problems early and speed up development. Key benefits include support for Linux, macOS, and Windows, CI/CD as code using YAML, and easy integration with GitHub and Azure Repos.<h3>How CI/CD Works in Azure Pipelines</h3><p>The CI/CD process begins when a developer commits code, which triggers a build pipeline. This pipeline compiles the code, runs unit tests, and creates build artifacts. Once successful, these artifacts are stored and a release pipeline is triggered, which deploys the application across different environments like Development, Staging, and Production.<h3>Core Components of Azure Pipelines</h3><p>To make CI/CD work smoothly, it’s important to understand the fundamental building blocks:<ul><li><strong>Stages, Jobs & Steps:</strong> A hierarchy for organizing your workflow into logical groups like Build, Test, or Deploy.<li><strong>Agent Pools:</strong> The compute infrastructure (VMs) where jobs run, either Microsoft-hosted or self-hosted for custom needs.<li><strong>Triggers:</strong> Rules that define when a pipeline should run, such as on a code commit (Push Trigger) or pull request.<li><strong>Variables:</strong> Reusable placeholders for values like environment names or version numbers.<li><strong>Artifacts:</strong> The output of your build process, like binaries or Docker images, passed to the release pipeline.<li><strong>Service Connections:</strong> Secure links to external services like Azure subscriptions, GitHub, or Docker Hub.<li><strong>Environments:</strong> Representations of your deployment targets (e.g., Dev, QA, Prod) that help track deployments and enforce policies.</ul><h3>Getting Started: CI Setup with YAML</h3><p>Setting up CI with YAML provides a version-controlled, code-based approach to defining your pipelines.<h4>Step 1: Define Triggers, Agents, and Variables</h4><p>Your YAML file starts by defining when the pipeline runs, what kind of machine it runs on, and any reusable variables.<pre class=code-block><code># Trigger on changes to main or develop branches
 trigger:
   branches:
     include:
@@ -68,11 +12,7 @@ pool:
 # Define variables for reuse
 variables:
   buildConfiguration: 'Release'
-  dotNetFramework: 'net6.0'</code></pre>
-                    
-                    <h4>Step 2: Add Build and Deploy Stages</h4>
-                    <p>Next, define the stages for building, testing, and deploying your application. The `Build` stage compiles the code and runs unit tests, while the `Deploy` stage pushes the artifacts to a service like Azure Web App.</p>
-<pre class="code-block"><code>stages:
+  dotNetFramework: 'net6.0'</code></pre><h4>Step 2: Add Build and Deploy Stages</h4><p>Next, define the stages for building, testing, and deploying your application. The `Build` stage compiles the code and runs unit tests, while the `Deploy` stage pushes the artifacts to a service like Azure Web App.<pre class=code-block><code>stages:
 - stage: Build
   displayName: 'Build Stage'
   jobs:
@@ -107,27 +47,4 @@ variables:
             inputs:
               azureSubscription: 'your-service-connection'
               appName: 'your-web-app-name'
-              package: '$(Pipeline.Workspace)/**/*.zip'</code></pre>
-
-                    <h3>How to Keep Pipeline Costs in Check</h3>
-                    <p>As your usage grows, it’s smart to optimize for cost and performance. Here are some best practices:</p>
-                    <ul>
-                        <li><strong>Agent Usage:</strong> Use Microsoft-hosted agents efficiently, and consider self-hosted agents for frequent or resource-heavy workloads to save on long-term costs.</li>
-                        <li><strong>Pipeline Efficiency:</strong> Use shallow clones to reduce fetch time, and cache dependencies to avoid downloading the same packages in every run.</li>
-                        <li><strong>Conditional Execution:</strong> Apply conditions (`condition: succeeded()`) to skip unnecessary stages or jobs, saving runtime and resources.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </main>
-    
-    <footer class="footer">
-        <div class="footer__container container">
-            <h1 class="footer__title">Srikanth Thokala</h1>
-            <p>&copy; 2025. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="assets/js/script.js"></script>
-</body>
-</html>
+              package: '$(Pipeline.Workspace)/**/*.zip'</code></pre><h3>How to Keep Pipeline Costs in Check</h3><p>As your usage grows, it’s smart to optimize for cost and performance. Here are some best practices:<ul><li><strong>Agent Usage:</strong> Use Microsoft-hosted agents efficiently, and consider self-hosted agents for frequent or resource-heavy workloads to save on long-term costs.<li><strong>Pipeline Efficiency:</strong> Use shallow clones to reduce fetch time, and cache dependencies to avoid downloading the same packages in every run.<li><strong>Conditional Execution:</strong> Apply conditions (`condition: succeeded()`) to skip unnecessary stages or jobs, saving runtime and resources.</ul></div></div></section></main><footer class=footer><div class="container footer__container"><h1 class=footer__title>Srikanth Thokala</h1><p>© 2025. All rights reserved.</div></footer><script src=assets/js/script.js></script>
