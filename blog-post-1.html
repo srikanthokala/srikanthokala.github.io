@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azure Cost Management | Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">Srikanth Thokala</a>
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="blog.html" class="nav__link active-link">Blog</a></li>
+                    <li class="nav__item"><a href="index.html#contact" class="nav__link">Contact</a></li>
+                </ul>
+                <i class="fa-solid fa-circle-half-stroke nav__theme-button" id="theme-button"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="blog-post-page section">
+            <div class="blog-post__container container card">
+                <h1 class="blog-post__title">Azure Cost Management - Best Practices & Tools</h1>
+                <p class="blog-post__meta">By Srikanth Thokala | Published on: September 20, 2025</p>
+                
+                <div class="blog-post__content">
+                    <p>The cloud is great, but cloud costs can quickly spiral out of control. In this article, we will take a look at Microsoft Azure cost management, sharing some of its more useful features and some best practices to optimize Azure cost.</p>
+                    
+                    <h3>What is Azure Cost Management?</h3>
+                    <p>Azure Cost Management is a free suite of tools provided by Microsoft to help organizations monitor, allocate, and optimize their cloud spending on Azure. It includes cost analysis dashboards, budgeting features, forecasting, and recommendations for reducing unnecessary expenses.</p>
+                    <p>Key features include:</p>
+                    <ul>
+                        <li><strong>Cost analysis:</strong> Provides detailed visualizations to track spending across subscriptions, resources, and services.</li>
+                        <li><strong>Budgets:</strong> Allows users to set custom spending thresholds with automated alerts to prevent budget overruns.</li>
+                        <li><strong>Recommendations:</strong> Identifies cost-saving opportunities such as underutilized resources or right-sizing VMs.</li>
+                        <li><strong>Exports and APIs:</strong> Enables scheduled exports of cost data and API access for integration with external systems.</li>
+                    </ul>
+
+                    <h3>What factors are affecting Azure's cost?</h3>
+                    <p>Costs in Azure are largely determined by several key factors. Understanding these is the first step toward effective management.</p>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Factor</th>
+                                    <th>Description</th>
+                                    <th>Impact on cost</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Number of resources</td>
+                                    <td>The total count of resources (e.g., VMs, databases) in your subscription.</td>
+                                    <td>The more resources provisioned, the higher the overall cost.</td>
+                                </tr>
+                                <tr>
+                                    <td>Sizes (SKUs) of resources</td>
+                                    <td>The specific size or tier of each resource (e.g., virtual machine size).</td>
+                                    <td>Larger or higher-tier SKUs cost more.</td>
+                                </tr>
+                                <tr>
+                                    <td>Resource utilization</td>
+                                    <td>The level of usage for each resource, such as CPU hours or storage IOPS.</td>
+                                    <td>High utilization increases costs, while underutilized resources may still incur charges.</td>
+                                </tr>
+                                <tr>
+                                    <td>Data transfer</td>
+                                    <td>Costs associated with outbound traffic between services or to the internet.</td>
+                                    <td>High data transfer rates, especially outbound, can quickly increase expenses.</td>
+                                </tr>
+                                <tr>
+                                    <td>Geographic region</td>
+                                    <td>The Azure region where the resource is provisioned.</td>
+                                    <td>Prices differ between regions based on demand and operational costs.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3>Azure Cost Management Tools</h3>
+                    <p>Inside the Azure portal, cost management is split into three main areas: Cost Management, Billing, and Products + Services. The Cost Management blade offers powerful tools for analysis and governance.</p>
+                    <h4>Cost Analysis & Forecasting</h4>
+                    <p>The Cost Analysis tool provides a detailed breakdown of your spending, allowing you to filter by service, resource, and tags. It offers insights into spending patterns and helps identify anomalies. It also uses machine learning algorithms to project future costs, allowing you to estimate and plan your budget accordingly.</p>
+                    <h4>Cost Alerts & Budgets</h4>
+                    <p>Setting up budgets and alerts should be one of the first steps in any new Azure subscription. You can create custom spending thresholds for subscriptions or resource groups and receive automated email alerts when your spending (or forecasted spending) approaches these limits, preventing budget overruns.</p>
+                    <h4>Advisor Recommendations</h4>
+                    <p>This section pulls cost-related recommendations directly from Azure Advisor, suggesting actions such as resizing or shutting down underutilized virtual machines, leveraging reserved instances for long-term workloads, or modifying service configurations for better efficiency.</p>
+
+                    <h3>Best Practices for Azure Cost Management</h3>
+                    <p>Effective Azure cost management involves a continuous cycle of monitoring, analysis, and optimization. Applying these best practices will enable cost control while maintaining performance.</p>
+                    <ul>
+                        <li><strong>Right-Size Services:</strong> Constantly monitor service metrics (CPU, memory, IOPS) to ensure that allocated resources are fully utilized without excess capacity.</li>
+                        <li><strong>Implement Autoscaling:</strong> For dynamic workloads, implement autoscaling policies to adjust resource allocation based on demand, minimizing costs for idle resources.</li>
+                        <li><strong>Utilize Tagging:</strong> Use Azure resource tags to associate resources with specific departments or projects. This enables detailed cost attribution and simplifies internal chargeback reporting.</li>
+                        <li><strong>Use Reserved Instances & Savings Plans:</strong> For stable, long-term workloads, opt for Azure Reserved Instances or Savings Plans to receive significant discounts over pay-as-you-go rates.</li>
+                        <li><strong>Optimize Storage and Backup:</strong> Regularly evaluate storage tiers and backup retention policies. Use lifecycle policies to automatically move data to more cost-efficient tiers like archive storage.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer__container container">
+            <h1 class="footer__title">Srikanth Thokala</h1>
+            <p>&copy; 2025. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
